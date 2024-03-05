@@ -77,30 +77,8 @@ if (!isset($_SESSION['angemeldet1']) || $_SESSION['angemeldet1'] !== true) {
 </head>
 <body>
     <div class="container">
-        <h1>Anmeldung zur Weihnachtsfeier</h1>
-        <form method="post" action="<?php echo htmlentities($_SERVER['PHP_SELF']) ?>">
-            <input type="text" name="vorname" placeholder="Vorname" required><br>
-            <input type="text" name="nachname" placeholder="Nachname" required><br>
-            <input type="submit" value="Anmelden">
-        </form>
-        <?php
-        if ($_SERVER["REQUEST_METHOD"] == "POST") {
-            $vorname = $_POST["vorname"];
-            $nachname = $_POST["nachname"];
-            require('anmeldung.php');
-            $result=0;
-            $result=eintragHinzufuegen($vorname,$nachname);
-            if($result==0){
-            echo "<p>Vielen Dank, $vorname $nachname, für deine Anmeldung zur Weihnachtsfeier!</p>";
-            }
-        }
-        ?>
-        <div class="event-details">
-            <h2>Veranstaltungsdetails</h2>
-            <p><strong>Beginn:</strong> 17. Dezember 2023, 18:30 Uhr</p>
-            <p><strong>Ort:</strong> Gasthaus Veigl in Loosdorf</p>
-            <p><strong>Beschreibung:</strong> Wir laden dich herzlich zu unserer jährlichen Weihnachtsfeier ein. Wir freuen uns auf Dein Kommen!</p>
-        </div>
+        <h1>Login erfolgrech</h1>
+       <p>Willkommen <?php echo $_SESSION["user"]; ?>!</p>
     </div>
 </body>
 </html>
