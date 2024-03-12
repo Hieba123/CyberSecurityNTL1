@@ -7,11 +7,12 @@ if((isset($_POST['user']) && $_POST['user'] === "root" && isset($_POST['passw'])
     $_SESSION['angemeldet1'] = true;
     $_SESSION['user'] = $_POST['user'];
    header('Location: registration.php');
+}elseif(isset($_POST['user']) && isset($_POST['passw'])) {
+    echo "<p>Falsches Passwort</p>";
 }
 
-/*if((isset($_POST['passw']) != "root") || ($_POST['passw'] != "htl")){
-    echo "<p>Falsches Passwort</p>";
-} */
+
+
 ?>
 
 
